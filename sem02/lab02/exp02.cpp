@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     vector<map<string, string>> v;
     int n;
-    cout << "Enter how many stock you want to add: ";
+    cout << "Enter how many stocks you want to add: ";
     cin >> n;
     for (int i =0; i < n; i++){
         string name, price, q;
@@ -28,8 +28,8 @@ int main() {
 
             }
             //cout << v.size() <<endl;
-        cout << "Stock Report" << endl;
-    cout << "==========================" << endl;
+        cout <<endl<< "Portfolio Summary" << endl;
+    cout << "================================" << endl;
         //Do operations
         int sum = 0;
         int x = 1;
@@ -39,5 +39,5 @@ int main() {
             x++;
         }
 
-        cout << "Total portfolio value " << sum ;
+        cout << "Total portfolio value $" << sum ;
 }

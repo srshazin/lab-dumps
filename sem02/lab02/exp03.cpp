@@ -45,12 +45,14 @@ int main() {
                     break;
                 }
             }
+            cout << "Search summary" <<endl;
+            cout << "==========================" << endl;
             if (found){
-                cout << "Found!";
+                cout << "Contact Found!";
                 cout << "Name: " << fphn << endl;
                 cout << "Email: " << fem << endl;
                  cout << "Phone: " << fphn << endl;
             } else {
-                cout << "Not found";
+                cout << "No contact found!";
             }
 }

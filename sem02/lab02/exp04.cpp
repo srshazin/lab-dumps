@@ -36,6 +36,6 @@ int main() {
     cout << "==========================" << endl;
     cout << "Name |  Report" << endl;
     for (auto i:v){
-        cout << i["name"] << " | " << i["a1"] << i["a2"] << i["a3"] << endl;
+        cout << i["name"] << " | " << i["a1"] << "  " << i["a2"] << "  " << i["a3"] << endl;
     }
 }

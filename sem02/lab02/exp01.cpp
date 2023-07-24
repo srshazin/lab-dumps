@@ -7,7 +7,7 @@ using namespace std;
 int main() {
 
     int n;
-    float sum, thres;
+    float sum=0, thres;
     cout << "How many days to analyze: ";
 
     cin >> n;
@@ -24,20 +24,20 @@ int main() {
     cout << "Threshold Temp: ";
     cin >> thres;
     cout << "Temperature Report" << endl;
-    cout << "==========================" << endl;
-    cout << "Average temperature : " << sum/(float)n;
+    cout << "===============================" << endl;
+    cout << "Average temperature : " << sum/n <<endl;
     float max = *max_element(v.begin(), v.end());
     float min = *min_element(v.begin(), v.end());
-    cout << "Highest temperature " << max <<endl ;
-    cout << "Lowest temperature " << min <<endl;
-    cout << "Days with temp above " << thres << ": ";
+    cout << "Highest temperature: " << max <<endl ;
+    cout << "Lowest temperature: " << min <<endl;
+    cout << "Days with temperature above " << thres << ": ";
     for (int i=0; i< n; i++){
         if (v.at(i) > thres) {
 
              cout << "Day " << i + 1 << " ";
             }
     }
-    cout << "\nDays with temp lower " << thres << ": ";
+    cout << "\nDays with temperature below " << thres << ": ";
     for (int i=0; i< n; i++){
         if (v.at(i) < thres) {
 
