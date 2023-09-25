@@ -1,33 +1,36 @@
-#include <iostream>
-#include <cmath>
+#include<iostream>
+#include<cmath>
 using namespace std;
 
-class Point{
-
+class point{
 private:
-    float p1[2], p2[2];
+    float x,y;
 
 public:
-    Point(float p_1[], float p_2[]){
-        p1[0] = p_1[0];
-        p1[1] = p_1[1];
-        p2[0] = p_2[0];
-        p2[1] = p_2[1];
-
+    point (int a, int b)
+    {
+       x = a;
+       y = b;
     }
-
-    float getDistance(){
-        float dist =  sqrt(pow((p2[0] - p1[0]), 2) + pow((p2[1] - p1[1]), 2));
-        return dist;
+    cpoint (const point &p1)
+    {
+       x = p1.x;
+       y = p1.y;
     }
-
+    float get_X()
+    {
+        return x;
+    }
+    float get_Y()
+    {
+        return y;
+    }
 };
-
-int main(){
-
-    float pt1[2] = {10, 15};
-    float pt2[2] = {12, 16};
-    Point p1(pt1, pt2);
-    Point p2 = p1;
-    cout << p2.getDistance() << endl;
+int main ()
+{
+    point p1(10 , 15);
+    point p2 = p1;
+    point p3(12 , 16);
+    float dis = sqrt(pow((p3.get_X() - p2.get_X()) , 2) + pow((p3.get_Y() - p2.get_Y()) , 2));
+    cout<<"Distance = "<<dis<<" Unit(s)"<<endl;
 }
